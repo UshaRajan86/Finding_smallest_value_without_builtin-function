@@ -1,0 +1,18 @@
+units2 = [{'speed': 1320},{'speed':1088},{'speed': 5463},
+{'speed': 555},{'speed': 4201},{'speed': 4578},{'speed': 42102}]
+
+
+MAX_NUMBER = 2 ** 32 - 1
+# Finds the unit with minimum speed.
+# If there are more than 1 units then the first occured
+# For an empty list the function returns None
+def findSlowestUnit(units):
+    slowestUnit = None
+    minSpeed = MAX_NUMBER
+    for currentUnit in units:
+        if currentUnit['speed'] < minSpeed:
+            minSpeed = currentUnit['speed']
+            slowestUnit=minSpeed
+    return slowestUnit
+
+print(findSlowestUnit(units2))
